@@ -1,0 +1,38 @@
+<h2>Add a New Celebrity</h2>
+<form action="/celebrities/create" method="post">
+  <input
+    type="text"
+    name="name"
+    id="celebrityNameForm"
+    placeholder="Celebrity Name"
+  />
+  <fieldset>
+    <legend>Select the Celebrity occupation(s):</legend>
+    <div>
+      <input type="checkbox" id="actor" name="occupation" value="actor" />
+      <label for="actor">Actor</label>
+    </div>
+    <div>
+      <input type="checkbox" id="singer" name="occupation" value="singer" />
+      <label for="singer">Singer</label>
+    </div>
+    <div>
+      <input type="checkbox" id="comedian" name="occupation" value="comedian" />
+      <label for="comedian">Comedian</label>
+    </div>
+    <div>
+      <input type="checkbox" id="unknown" name="occupation" value="unknown" />
+      <label for="unknown">Non defined</label>
+    </div>
+  </fieldset>
+  <input
+    type="text"
+    name="catchPhrase"
+    id="celebritycatchPhraseForm"
+    placeholder="Your Celebrity catch phrase"
+  />
+
+  <div>
+    <button type="submit">Create the Celebrity</button>
+  </div>
+</form>

@@ -1,0 +1,40 @@
+<h2>Add a New Movie</h2>
+<form action="/movies/create" method="post">
+  <input
+    type="text"
+    name="title"
+    id="movieTitleForm"
+    placeholder="Movie Title"
+    required
+  />
+
+  <input
+    type="text"
+    name="genre"
+    id="movieGenreForm"
+    placeholder="Movie genre"
+  />
+
+  <input type="text" name="plot" id="moviePlotForm" placeholder="Movie Plot" />
+
+  <label for="Celebrities">Select the Celebrities who are in this movie:</label>
+  <select name="cast" id="celebritiesSelection" multiple>
+    {{#each allCelebrities}}
+      <option value={{this._id}}>{{this.name}}</option>
+    {{/each}}
+  </select>
+
+  {{!-- <fieldset>
+    <legend>Select the Celebrities who are in this movie:</legend>
+    <div>
+    {{#each allCelebrities}}
+      <input type="checkbox" id={{this.name}} name="cast" value={{this._id}} />
+      <label for="{{this.name}}">{{this.name}}</label>
+    </div>
+    {{/each}}
+  </fieldset> --}}
+
+  <div>
+    <button type="submit">Create this new Movie</button>
+  </div>
+</form>

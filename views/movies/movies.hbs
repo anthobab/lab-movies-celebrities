@@ -1,0 +1,25 @@
+<h2>Movies List</h2>
+
+<div>
+  <ul>
+    {{#each allMovies}}
+      <li><h4>Movie Name: {{this.name}}</h4>
+        genre:
+        {{this.genre}}
+        plot:
+        {{this.plot}}
+        the cast:
+        <ul>
+          {{#each this.cast}}
+            <li>- {{this.name}}</li>
+          {{/each}}
+        </ul>
+        {{!-- <p><a href="/drones/{{this._id}}/edit">Edit the Drone</a></p>
+        <form action="/drones/{{this._id}}/delete" method="post">
+          <button>Delete the Drone</button>
+        </form> --}}
+
+      </li>
+    {{/each}}
+  </ul>
+</div>

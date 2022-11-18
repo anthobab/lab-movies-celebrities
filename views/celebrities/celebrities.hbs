@@ -1,0 +1,24 @@
+<h2>Celebrities List</h2>
+
+<div>
+  <ul>
+    {{#each allCelebrities}}
+      <li><h4>Celebrity Name: {{this.name}}</h4>
+        occupation :
+        <ul>
+          {{#each this.occupation}}
+            <li>- {{this}}</li>
+          {{/each}}
+        </ul>
+        Catch Prase :
+        {{this.catchPhrase}}
+
+        {{!-- <p><a href="/drones/{{this._id}}/edit">Edit the Drone</a></p>
+        <form action="/drones/{{this._id}}/delete" method="post">
+          <button>Delete the Drone</button>
+        </form> --}}
+
+      </li>
+    {{/each}}
+  </ul>
+</div>
